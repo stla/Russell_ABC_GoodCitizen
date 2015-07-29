@@ -1,0 +1,76 @@
+---
+title       : ABC du bon citoyen
+subtitle    : 
+author      : Bertrand Russell
+job         : 
+framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+```{r, echo=FALSE}
+parse_body <- function(body){
+  html = ifelse(body != '', slidify:::md2html(body), '')
+  pat = '^(<h([0-9])>([^\n]*)</h[0-9]>)?\n*(.*)$'
+  pat = stringr:::regex(pat, dotall = TRUE, multiline = TRUE)
+  body = setNames(as.list(stringr:::str_match(html, pat)),
+   c('html', 'header', 'level', 'title', 'content'))
+  # body = modifyList(body, parse_content(body$content))
+  # HACK: So that landslide h1's with no content are centered
+  if (body$content == "" | is.na(body$content)){
+    body$content = NULL
+  }
+  if (body$header == "" | is.na(body$header)){
+    body$header = NULL
+  }
+  return(body)
+}
+assignInNamespace("parse_body", parse_body, ns="slidify")
+```
+
+```{r, echo=FALSE, cache=FALSE}
+dd <- data.frame(
+  lettre=LETTERS[1:2],
+  mot=c("Ânerie", "Bolchévique"),
+  def=c("Ce que *vous* pensez", "Quiconque xxx"),
+  row.names="lettre")
+texte <- function(lettre){
+  sprintf("<h2><em>%s</em></h2><h3>%s</h3>", dd[lettre,"mot"], dd[lettre,"def"])
+}
+slide <- function(lettre){
+  cat(sprintf("--- &twocol
+              
+</br>
+
+*** =left
+
+![%s](./assets/img/Letter%s.jpg)
+
+*** =right
+
+%s
+", lettre, lettre, texte(lettre)))  
+}
+```
+
+
+![](./assets/img/russell_cartoon.jpg)
+
+--- 
+
+## Préface
+
+Le présent volume a pour vocation de combler une lacune dont notre système éducatif est entaché de longue date. Les personnes ayant la plus grande expérience des toutes premières étapes du processus pédagogique ont été obligées de conclure que, dans de très nombreux cas, beaucoup de complications inutiles et d'heures de cours gaspillées, alors qu'on aurait pu l'éviter, s'expliquaient par le fait que l'ABC, cette clé de toute sagesse, n'était pas présenté d'une manière assez attrayante pour les esprits immatures à qui nous avons malheureusement le devoir de nous adresser. Cet ouvrage, si restreinte en soit l'étendue et si modeste en soit la visée, répond exactement, nous le croyons et nous l'espérons, au besoin d'édification de l'esprit d'un enfant au stade de l'éveil, confronté aux dangers de notre époque. Ce que nous avançons repose sur des preuves concrètes. Nous avons essayé notre alphabet sur de nombreux sujets. Certains l'ont jugé sage, d'autres stupide. Certains l'ont considéré honnête, d'autres ont pu le trouver subversif. Mais - nous le disons avec la confiance la plus complète et la plus absolue - tous ceux à qui nous avons montré ce livre ont eu, depuis lors, une connaissance impeccable de l'alphabet. C'est pourquoi nous sommes convaincus que, dès la seconde où elle prendront connaissance de cet ouvrage, nos autorités éducatives donneront immédiatement l'ordre de l'adopter dans toutes les institutions scolaires où sont inculqués les premiers éléments d'alphabétisation.
+
+
+
+```{r, echo=FALSE, results='asis'}
+slide("A")
+```
+
+```{r, echo=FALSE, results='asis'}
+slide("B")
+```
+
