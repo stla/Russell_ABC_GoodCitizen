@@ -99,7 +99,7 @@ cat(texte("I"))
 ```
 
 ```{r, echo=FALSE, results='asis'}
-for(letter in LETTERS[11:16]){
+for(letter in LETTERS[10:16]){
   slide(letter)
 }
 ```
