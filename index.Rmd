@@ -144,6 +144,8 @@ for(letter in LETTERS[19:26]){
 
 *** =right
 
+</br>
+
 Depuis qu'Adam et Ève ont mangé la pomme,
 
 
@@ -158,6 +160,8 @@ Depuis qu'Adam et Ève ont mangé la pomme,
 
 *** =right
 
+</br>
+
 jamais l'homme n'a réfréné la folie
 
 
@@ -170,6 +174,8 @@ jamais l'homme n'a réfréné la folie
 ![Epitome4](./assets/img/epitome4.jpg) 
 
 *** =right
+
+</br>
 
 dont il est capable.
 
