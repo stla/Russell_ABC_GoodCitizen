@@ -73,7 +73,8 @@ L'éditeur, enthousiasmé, commença à en programmer la publication pour le pri
 
 --- .cover
 
-![Cover](./assets/img/Cover.jpg)
+<img src="./assets/img/Cover.jpg" alt="Cover" align="middle" style="display:block;margin-left:auto;margin-right:auto;">
+
 
 --- .preface
 
@@ -115,7 +116,68 @@ for(letter in LETTERS[19:26]){
 }
 ```
 
+--- &twocol .cover
+              
+</br>
+
+*** =left
+
+![Epitome1](./assets/img/epitome1.jpg) 
+
+*** =right
+
+</br>
+
+<span style="font-size:29px">**ABRÉGÉ DE L'HISTOIRE DU MONDE**</span>
+
+</br>
+
+<p style="width:20em;margin-left:auto;margin-right:auto;">À l'usage des écoliers de la planète Mars</p>
+
+--- &twocol .epitome 
+              
+</br>
+
+*** =left
+
+![Epitome2](./assets/img/epitome2.jpg) 
+
+*** =right
+
+Depuis qu'Adam et Ève ont mangé la pomme,
+
+
+
+--- &twocol .epitome 
+              
+</br>
+
+*** =left
+
+![Epitome3](./assets/img/epitome3.jpg) 
+
+*** =right
+
+jamais l'homme n'a réfréné la folie
+
+
+--- &twocol .epitome 
+              
+</br>
+
+*** =left
+
+![Epitome4](./assets/img/epitome4.jpg) 
+
+*** =right
+
+dont il est capable.
+
+
+--- .cover 
+
+<img src="./assets/img/epitome5.jpg" alt="Epitome5" align="middle" style="display:block;margin-left:auto;margin-right:auto;">
+
 ```{r, echo=FALSE}
 unlink("./.cache", recursive=TRUE)
 ```
-
