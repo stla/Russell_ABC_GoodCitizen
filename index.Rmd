@@ -71,6 +71,9 @@ Le 13 décembre 1952, Bertrand Russell adressait son manuscrit de *L'Alphabet du
 
 L'éditeur, enthousiasmé, commença à en programmer la publication pour le printemps suivant, et demanda à Russell quelles étaient ses conditions. *"Vous me demandez mes conditions, répondit le philosophe, je comptais vous offrir mon alphabet pour Noël. Si cela vous convient, j'aime autant qu'il en soit ainsi. Je me garderais bien de réclamer des droits d'auteur sur ce qui risque de ne pas être une affaire très rentable."*
 
+--- .cover
+
+![Cover](./assets/img/Cover.jpg)
 
 --- .preface
 
